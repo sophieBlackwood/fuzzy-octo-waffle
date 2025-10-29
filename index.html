@@ -11,32 +11,35 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1>Cozy Autumn</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+   <!-- Nav Bar -->
+	<div class="navbar">
+		<img id="logoImage" src="Logos/logo_text2_transparent.png" alt="logo" height="30">
+		<a href="index.html#home">Home</a>
+		<a href="index.html#about-me">About Me</a>
+	</div>
+	
+<!-- Side Nav for smaller screens -->
+	<div class="hamburger-menu" onclick="openNav()">&#9776; <img src="Logos/logo_text2_transparent.png" alt="logo image" class="sidenav-img"></div>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+		<hr>
+		<a href="index.html#home">Home</a>
+		<a href="index.html#about-me">About Me</a>
+	</div>
 
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h2>Welcome to Cozy Autumn</h2>
-                <p>Experience the warmth and beauty of fall in every pixel.</p>
+                <h2>Welcome to the Fuzzy Octo Waffle!</h2>
+                <p>A website I coded because I was bored.</p>
                 <button id="learnMoreBtn">Learn More</button>
             </div>
         </section>
 
         <section id="about" class="content-section">
             <div class="container">
-                <h2>About Us</h2>
-                <p>We celebrate the colors of autumn with a cozy modernist aesthetic, combining simplicity and warmth in design.</p>
+                <h2>About Me</h2>
+                <p>I am a high school student with apparently no sanity and a lot of misused talent. I do very many things and have lots of potential but end up coding stuff like this instead.</p>
             </div>
         </section>
 
