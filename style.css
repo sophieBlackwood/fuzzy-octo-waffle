@@ -6,8 +6,8 @@
 body {
     margin: 0;
     font-family: 'proxima-nova', sans-serif;
-    background: #fffaf6;
-    color: #333;
+    background: #fff8f0; /* soft cream */
+    color: #4b3621; /* deep brown for text */
     scroll-behavior: smooth;
 }
 
@@ -19,29 +19,36 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'comic-sans', sans-serif;
-    color: #ff6f61;
+    font-family: 'Georgia', serif; /* elegant fall font */
+    color: #b45309; /* warm burnt orange */
     margin: 0 0 1rem 0;
 }
 
 a {
     text-decoration: none;
-    color: #ff6f61;
+    color: #c05621; /* muted pumpkin orange */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d97706; /* brighter accent on hover */
 }
 
 button {
     cursor: pointer;
     padding: 0.75rem 1.5rem;
-    background: #ffb347;
+    background: #f59e0b; /* golden orange */
     border: none;
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.3s ease;
     font-family: inherit;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 button:hover {
-    background: #ffcc70;
+    background: #d97706;
     transform: translateY(-3px);
 }
 
@@ -52,20 +59,20 @@ button:hover {
     justify-content: flex-start;
     gap: 1rem;
     padding: 1rem 2rem;
-    background: #ffe6d9;
+    background: #fef3c7; /* soft pale yellow */
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar a {
     font-weight: bold;
-    color: #ff6f61;
-    transition: color 0.3s;
+    color: #b45309;
 }
 
 .navbar a:hover {
-    color: #ff9933;
+    color: #c2410c;
 }
 
 /* Hamburger / Side Nav */
@@ -83,7 +90,7 @@ button:hover {
     z-index: 2000;
     top: 0;
     left: 0;
-    background-color: #fff0e6;
+    background-color: #fff8f0;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 3rem;
@@ -93,11 +100,11 @@ button:hover {
     display: block;
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    color: #ff6f61;
+    color: #b45309;
 }
 
 .sidenav a:hover {
-    color: #ff9933;
+    color: #c2410c;
 }
 
 .sidenav .closebtn {
@@ -111,7 +118,7 @@ button:hover {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #fff0e6, #ffe6d9);
+    background: linear-gradient(to bottom, #fff8f0, #fde68a); /* soft cream to golden yellow */
 }
 
 .hero .hero-buttons {
@@ -129,19 +136,22 @@ button:hover {
     margin-top: 2rem;
 }
 
-.skills ul,
-.timeline ul {
+.skills ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.skills li::before {
-    content: "🐙 ";
+.skills li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.timeline li::before {
-    content: "🧩 ";
+.skills li::before {
+    content: "🍂"; /* subtle fall leaf accent */
+    position: absolute;
+    left: 0;
 }
 
 /* ========== Projects Section ========== */
@@ -158,11 +168,12 @@ button:hover {
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .project-card img {
@@ -184,11 +195,12 @@ button:hover {
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .blog-post:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* ========== Contact Section ========== */
@@ -202,7 +214,7 @@ button:hover {
 #contactForm textarea {
     padding: 0.75rem;
     border-radius: 8px;
-    border: 1px solid #ffb347;
+    border: 1px solid #f59e0b;
     font-family: inherit;
 }
 
@@ -213,24 +225,24 @@ button:hover {
 .social-icons a {
     margin-right: 1rem;
     font-size: 1.5rem;
-    color: #ff6f61;
+    color: #b45309;
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #ff9933;
+    color: #c2410c;
 }
 
 /* ========== Footer ========== */
 .site-footer {
-    background: #ffe6d9;
+    background: #fde68a; /* warm golden footer */
     padding: 2rem;
     text-align: center;
 }
 
 .footer-nav a {
     margin: 0 0.5rem;
-    color: #ff6f61;
+    color: #b45309;
 }
 
 /* ========== Responsive ========== */
