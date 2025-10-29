@@ -118,7 +118,7 @@ button:hover {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #fff8f0, #fde68a); /* soft cream to golden yellow */
+    background:#fde68a;
 }
 
 .hero .hero-buttons {
