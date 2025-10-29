@@ -1,64 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Fuzzy Octo Waffle </title>
-	<link rel="stylesheet" href="https://use.typekit.net/rig8hkd.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<link rel="icon" type="image/x-icon" href="images/Logos/logo_icon_transparent.png">
-	<link rel="stylesheet" href="styles.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="script.js" defer></script>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzy Octo Waffle</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rig8hkd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Logos/logo_icon_transparent.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-   <!-- Nav Bar -->
-	<div class="navbar">
-		<img id="logoImage" src="Logos/logo_text2_transparent.png" alt="logo" height="30">
-		<a href="index.html#home">Home</a>
-		<a href="index.html#about-me">About Me</a>
-	</div>
-	
-<!-- Side Nav for smaller screens -->
-	<div class="hamburger-menu" onclick="openNav()">&#9776; <img src="Logos/logo_text2_transparent.png" alt="logo image" class="sidenav-img"></div>
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-		<hr>
-		<a href="index.html#home">Home</a>
-		<a href="index.html#about-me">About Me</a>
-	</div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img id="logoImage" src="Logos/logo_text2_transparent.png" alt="logo" height="30">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Side Nav for mobile -->
+    <div class="hamburger-menu" onclick="openNav()">&#9776; 
+        <img src="Logos/logo_text2_transparent.png" alt="logo image" class="sidenav-img">
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+        <hr>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </div>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="container">
-                <h2>Welcome to the Fuzzy Octo Waffle!</h2>
-                <p>A website I coded because I was bored.</p>
-                <button id="learnMoreBtn">Learn More</button>
+                <h1>Welcome to the Fuzzy Octo Waffle!</h1>
+                <p>Octopus brains. Waffle hearts. Chaos included.</p>
+                <div class="hero-buttons">
+                    <button onclick="scrollToSection('projects')">See My Projects</button>
+                    <button onclick="scrollToSection('blog')">Read My Thoughts</button>
+                </div>
             </div>
         </section>
 
+        <!-- About Me Section -->
         <section id="about" class="content-section">
             <div class="container">
                 <h2>About Me</h2>
-                <p>I am a high school student with apparently no sanity and a lot of misused talent. I do very many things and have lots of potential but end up coding stuff like this instead.</p>
+                <div class="about-grid">
+                    <div class="bio">
+                        <p>Hi! I'm a high school student with apparently no sanity and a lot of misused talent. When I'm not coding nonsense websites, I’m probably drawing, gaming, or explaining math to my cat.</p>
+                    </div>
+                    <div class="skills">
+                        <h3>Skills & Interests</h3>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>Photoshop & Digital Art</li>
+                            <li>Gaming & Memes</li>
+                            <li>Mischief & Chaos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <h3>My Journey</h3>
+                    <ul>
+                        <li><strong>2018:</strong> My first HTML page!</li>
+                        <li><strong>2022:</strong> Learned JS and started experimenting.</li>
+                        <li><strong>2025:</strong> Built Fuzzy Octo Waffle… because why not?</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="images/projects/waffle_game.png" alt="Tiny Waffle Maker Game">
+                        <h3>Tiny Waffle Maker Game</h3>
+                        <p>Just waffles. But the octopus is involved.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/projects/random_idea.png" alt="Random Idea Generator">
+                        <h3>Random Idea Generator</h3>
+                        <p>Press a button, get chaos. No explanations given.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/projects/meme_collector.png" alt="Meme Collector">
+                        <h3>Meme Collector</h3>
+                        <p>Because the internet deserves to be properly cataloged.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Thoughts Section -->
+        <section id="blog" class="content-section">
+            <div class="container">
+                <h2>Random Thoughts & Blog</h2>
+                <div class="blog-grid">
+                    <div class="blog-post">
+                        <h3>Octopus Logic</h3>
+                        <p>Sometimes I think like an octopus… it’s chaotic but strangely efficient.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                    <div class="blog-post">
+                        <h3>Waffle Physics</h3>
+                        <p>Have you ever wondered if waffles could be quantum? Me neither… until now.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                    <div class="blog-post">
+                        <h3>Code Gone Wrong</h3>
+                        <p>That moment when your code works… but only by accident.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact" class="content-section">
             <div class="container">
-                <h2>Contact</h2>
+                <h2>Contact Me</h2>
+                <p>Shoot me a message! I promise I’ll reply before my octopus eats my homework.</p>
                 <form id="contactForm">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
                     <textarea placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2025 SophieBlackwood. All Rights Reserved.</p>
+            <div class="footer-nav">
+                <a href="#home">Home</a> | 
+                <a href="#about">About Me</a> | 
+                <a href="#projects">Projects</a> | 
+                <a href="#blog">Blog</a> | 
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </footer>
 
