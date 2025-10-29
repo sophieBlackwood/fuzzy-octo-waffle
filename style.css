@@ -1,4 +1,8 @@
 /* ========== Global Styles ========== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'proxima-nova', sans-serif;
@@ -17,6 +21,7 @@ body {
 h1, h2, h3 {
     font-family: 'comic-sans', sans-serif;
     color: #ff6f61;
+    margin: 0 0 1rem 0;
 }
 
 a {
@@ -32,6 +37,7 @@ button {
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.3s ease;
+    font-family: inherit;
 }
 
 button:hover {
@@ -108,7 +114,7 @@ button:hover {
     background: linear-gradient(to bottom, #fff0e6, #ffe6d9);
 }
 
-.hero-buttons {
+.hero .hero-buttons {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
@@ -123,19 +129,15 @@ button:hover {
     margin-top: 2rem;
 }
 
-.skills ul {
+.skills ul,
+.timeline ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .skills li::before {
     content: "🐙 ";
-}
-
-/* Timeline */
-.timeline ul {
-    list-style: none;
-    padding: 0;
 }
 
 .timeline li::before {
@@ -196,10 +198,12 @@ button:hover {
     gap: 1rem;
 }
 
-#contactForm input, #contactForm textarea {
+#contactForm input,
+#contactForm textarea {
     padding: 0.75rem;
     border-radius: 8px;
     border: 1px solid #ffb347;
+    font-family: inherit;
 }
 
 .social-icons {
