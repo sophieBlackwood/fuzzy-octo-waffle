@@ -118,7 +118,25 @@ button:hover {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #fff8f0, #fde68a);
+    background: url('images/hero_image.jpg') center/cover no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(76, 40, 20, 0.45); /* warm brown overlay for readability */
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero .hero-buttons {
