@@ -118,7 +118,7 @@ button:hover {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background:#fde68a;
+    background:url("hero_image.jpg");
 }
 
 .hero .hero-buttons {
