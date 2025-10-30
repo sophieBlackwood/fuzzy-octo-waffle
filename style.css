@@ -7,7 +7,7 @@ body {
     margin: 0;
     font-family: 'proxima-nova', sans-serif;
     background: #fff8f0; /* soft cream */
-    color: #4b3621; /* deep brown for text */
+    color: #4b3621; /* deep brown */
     scroll-behavior: smooth;
 }
 
@@ -19,25 +19,25 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Georgia', serif; /* elegant fall font */
-    color: #b45309; /* warm burnt orange */
+    font-family: 'Georgia', serif;
+    color: #b45309; /* burnt orange */
     margin: 0 0 1rem 0;
 }
 
 a {
     text-decoration: none;
-    color: #c05621; /* muted pumpkin orange */
+    color: #c05621;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #d97706; /* brighter accent on hover */
+    color: #d97706;
 }
 
 button {
     cursor: pointer;
     padding: 0.75rem 1.5rem;
-    background: #f59e0b; /* golden orange */
+    background: #f59e0b;
     border: none;
     border-radius: 8px;
     font-weight: bold;
@@ -59,7 +59,7 @@ button:hover {
     justify-content: flex-start;
     gap: 1rem;
     padding: 1rem 2rem;
-    background: #fef3c7; /* soft pale yellow */
+    background: #fef3c7;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -118,7 +118,7 @@ button:hover {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background:url("hero_image.jpg");
+    background: linear-gradient(to bottom, #fff8f0, #fde68a);
 }
 
 .hero .hero-buttons {
@@ -149,7 +149,7 @@ button:hover {
 }
 
 .skills li::before {
-    content: "🍂"; /* subtle fall leaf accent */
+    content: "🍂";
     position: absolute;
     left: 0;
 }
@@ -182,7 +182,7 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-/* ========== Blog Section ========== */
+/* ========== Blog Section (main page grid) ========== */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -235,7 +235,7 @@ button:hover {
 
 /* ========== Footer ========== */
 .site-footer {
-    background: #fde68a; /* warm golden footer */
+    background: #fde68a;
     padding: 2rem;
     text-align: center;
 }
@@ -253,5 +253,115 @@ button:hover {
 
     .hamburger-menu {
         display: block;
+    }
+}
+
+/* ========================================================= */
+/* ========== INDIVIDUAL BLOG POST PAGE STYLING ========== */
+/* ========================================================= */
+
+.post-hero {
+    position: relative;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.post-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(76, 40, 20, 0.4);
+}
+
+.post-hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.post-hero h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.post-meta {
+    font-style: italic;
+    font-size: 1rem;
+    color: #fde68a;
+}
+
+/* Main Blog Post Content */
+.post-content {
+    padding: 3rem 0;
+    line-height: 1.8;
+}
+
+.feature-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.post-content h2 {
+    color: #b45309;
+    font-family: 'Georgia', serif;
+    margin-top: 2rem;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 220px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Bottom CTA for Blog Posts */
+.post-footer {
+    text-align: center;
+    border-top: 2px solid #fcd34d;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.post-footer a {
+    color: #c05621;
+}
+
+.post-footer a:hover {
+    color: #b45309;
+}
+
+/* Small screen adjustments for blog post page */
+@media (max-width: 600px) {
+    .post-hero h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .image-gallery img {
+        height: 180px;
     }
 }
